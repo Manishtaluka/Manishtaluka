@@ -2,10 +2,10 @@ name: Generate GitHub Stats Images
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # runs every 6 hours
-  workflow_dispatch:          # allows manual trigger
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
   push:
-    branches: [main, master]
+    branches: [main]
 
 jobs:
   build:
@@ -14,26 +14,51 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate GitHub Readme Stats (Stats Card)
-        run: |
-          mkdir -p assets
-          curl -s "https://github-readme-stats.vercel.app/api?username=Manishtaluka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" -o assets/stats.svg || true
+      - name: Create assets folder
+        run: mkdir -p assets
 
-      - name: Generate Top Languages Card
+      - name: Download Stats Card
         run: |
-          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=Manishtaluka&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg || true
+          for i in 1 2 3; do
+            curl -f -s --max-time 15 \
+              "https://github-readme-stats.vercel.app/api?username=Manishtaluka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" \
+              -o assets/stats.svg && echo "stats OK" && break || sleep 5
+          done
 
-      - name: Generate Streak Stats
+      - name: Download Top Languages Card
         run: |
-          curl -s "https://github-readme-streak-stats-eight.vercel.app?user=Manishtaluka&theme=tokyonight&hide_border=true" -o assets/streak.svg || true
+          for i in 1 2 3; do
+            curl -f -s --max-time 15 \
+              "https://github-readme-stats.vercel.app/api/top-langs/?username=Manishtaluka&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" \
+              -o assets/top-langs.svg && echo "langs OK" && break || sleep 5
+          done
 
-      - name: Commit generated assets
+      - name: Download Streak Stats
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          for i in 1 2 3; do
+            curl -f -s --max-time 15 \
+              "https://github-readme-streak-stats-eight.vercel.app?user=Manishtaluka&theme=tokyonight&hide_border=true" \
+              -o assets/streak.svg && echo "streak OK" && break || sleep 5
+          done
+
+      - name: Download Trophies
+        run: |
+          for i in 1 2 3; do
+            curl -f -s --max-time 15 \
+              "https://github-profile-trophy.vercel.app/?username=Manishtaluka&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&row=1" \
+              -o assets/trophies.svg && echo "trophies OK" && break || sleep 5
+          done
+
+      - name: Commit and push assets
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
           git add assets/
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update stats images [skip ci]"
-          git push
+          git diff --staged --quiet || git commit -m "chore: update stats images [skip ci]"
+          git push origin main
