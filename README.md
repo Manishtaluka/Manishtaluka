@@ -70,13 +70,11 @@ I'm **Manish Taluka**, a passionate **Full Stack Developer** who loves turning i
 <div align="center">
 
   <img src="https://github-readme-stats.vercel.app/api?username=Manishtaluka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="Manish's GitHub Stats"/>
-  <img src="https://github-readme-streak-stats-eight.vercel.app?user=Manishtaluka&theme=tokyonight&hide_border=true" width="48%" alt="Manish's GitHub Streak"/>
+  <img src="https://github-readme-streak-stats-eight.vercel.app?user=Manishtaluka&theme=tokyonight&hide_border=true" width="48%" />
 
 </div>
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Manishtaluka&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="48%" alt="Top Languages"/>
-</div>
+
 
 ---
 
