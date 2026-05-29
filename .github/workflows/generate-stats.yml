@@ -17,11 +17,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate GitHub Stats Card
-        uses: aveek-saha/github-profile-summary-cards@v5
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Generate GitHub Readme Stats (Stats Card)
         run: |
           mkdir -p assets
