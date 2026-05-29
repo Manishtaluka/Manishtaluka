@@ -7,7 +7,7 @@
 
 <!-- Animated Header -->
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hey+there!+I'm+Manish+%F0%9F%91%8B;Full+Stack+Developer;An+Mlrit+Student;Always+learning%2C+always+growing+%F0%9F%9A%80" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hey+there!+I'm+Manish+%F0%9F%91%8B;Full+Stack+Developer;Building+the+Mernstack+projects;Always+learning%2C+always+growing+%F0%9F%9A%80" alt="Typing SVG" />
 </div>
 
 <br/>
@@ -69,19 +69,21 @@ I'm **Manish Taluka**, a passionate **Full Stack Developer** who loves turning i
 
 <div align="center">
 
-  <img src="https://github-readme-stats.vercel.app/api?username=Manishtaluka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="Manish's GitHub Stats"/>
-  <img src="https://github-readme-streak-stats-eight.vercel.app?user=Manishtaluka&theme=tokyonight&hide_border=true" width="48%" />
+  <img src="https://github-readme-stats-winning.vercel.app/api?username=Manishtaluka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="Manish's GitHub Stats"/>
+  <img src="https://github-readme-streak-stats-eight.vercel.app?user=Manishtaluka&theme=tokyonight&hide_border=true" width="48%" alt="Manish's GitHub Streak"/>
 
 </div>
 
-
+<div align="center">
+  <img src="https://github-readme-stats-winning.vercel.app/api/top-langs/?username=Manishtaluka&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="48%" alt="Top Languages"/>
+</div>
 
 ---
 
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Manishtaluka&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&row=1" alt="GitHub Trophies"/>
+  <img src="https://github-profile-trophy-winning.vercel.app/?username=Manishtaluka&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&row=1" alt="GitHub Trophies"/>
 </div>
 
 ---
