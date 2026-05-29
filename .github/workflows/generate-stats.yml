@@ -1,0 +1,44 @@
+name: Generate GitHub Stats Images
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # runs every 6 hours
+  workflow_dispatch:          # allows manual trigger
+  push:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate GitHub Stats Card
+        uses: Aveek-Saha/GitHub-Profile-Summary-Cards@v5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate GitHub Readme Stats (Stats Card)
+        run: |
+          mkdir -p assets
+          curl -s "https://github-readme-stats.vercel.app/api?username=Manishtaluka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" -o assets/stats.svg || true
+
+      - name: Generate Top Languages Card
+        run: |
+          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=Manishtaluka&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg || true
+
+      - name: Generate Streak Stats
+        run: |
+          curl -s "https://github-readme-streak-stats-eight.vercel.app?user=Manishtaluka&theme=tokyonight&hide_border=true" -o assets/streak.svg || true
+
+      - name: Commit generated assets
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update stats images [skip ci]"
+          git push
