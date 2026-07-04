@@ -1,28 +1,24 @@
-<svg width="495" height="207" viewBox="0 0 495 207" xmlns="http://www.w3.org/2000/svg">
+<svg width="495" height="179" viewBox="0 0 495 179" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a1b27"/>
       <stop offset="100%" style="stop-color:#24273a"/>
     </linearGradient>
   </defs>
-  <rect width="495" height="207" rx="10" fill="url(#bg2)" stroke="#e2e8f020" stroke-width="1"/>
+  <rect width="495" height="179" rx="10" fill="url(#bg2)" stroke="#e2e8f020" stroke-width="1"/>
   <text x="25" y="30" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#a9b1d6">Most Used Languages</text>
-  <rect x="25" y="50" width="197.8" height="8" fill="#f1e05a" rx="4"/><rect x="222.77777777777777" y="50" width="148.3" height="8" fill="#e34c26" rx="4"/><rect x="371.1111111111111" y="50" width="49.4" height="8" fill="#563d7c" rx="4"/><rect x="420.55555555555554" y="50" width="49.4" height="8" fill="#b07219" rx="4"/>
+  <rect x="25" y="50" width="247.2" height="8" fill="#f1e05a" rx="4"/><rect x="272.22222222222223" y="50" width="148.3" height="8" fill="#e34c26" rx="4"/><rect x="420.55555555555554" y="50" width="49.4" height="8" fill="#b07219" rx="4"/>
   
       <circle cx="25" cy="71" r="5" fill="#f1e05a"/>
       <text x="38" y="75" font-family="Segoe UI,sans-serif" font-size="12" fill="#a9b1d6">JavaScript</text>
-      <text x="430" y="75" font-family="Segoe UI,sans-serif" font-size="12" fill="#787c99" text-anchor="end">44.4%</text>
+      <text x="430" y="75" font-family="Segoe UI,sans-serif" font-size="12" fill="#787c99" text-anchor="end">55.6%</text>
     
       <circle cx="25" cy="99" r="5" fill="#e34c26"/>
       <text x="38" y="103" font-family="Segoe UI,sans-serif" font-size="12" fill="#a9b1d6">HTML</text>
       <text x="430" y="103" font-family="Segoe UI,sans-serif" font-size="12" fill="#787c99" text-anchor="end">33.3%</text>
     
-      <circle cx="25" cy="127" r="5" fill="#563d7c"/>
-      <text x="38" y="131" font-family="Segoe UI,sans-serif" font-size="12" fill="#a9b1d6">CSS</text>
+      <circle cx="25" cy="127" r="5" fill="#b07219"/>
+      <text x="38" y="131" font-family="Segoe UI,sans-serif" font-size="12" fill="#a9b1d6">Java</text>
       <text x="430" y="131" font-family="Segoe UI,sans-serif" font-size="12" fill="#787c99" text-anchor="end">11.1%</text>
-    
-      <circle cx="25" cy="155" r="5" fill="#b07219"/>
-      <text x="38" y="159" font-family="Segoe UI,sans-serif" font-size="12" fill="#a9b1d6">Java</text>
-      <text x="430" y="159" font-family="Segoe UI,sans-serif" font-size="12" fill="#787c99" text-anchor="end">11.1%</text>
     
 </svg>
